@@ -62,3 +62,24 @@
   echo '9.';
   // enter your code
 ?>
+
+<?php
+  // Define an array "myarray" consisting of elements "SI664", "Chuck", "Young Eun"
+  // Use print_r to inspect the array
+  echo '10.';
+  // enter your code
+?>
+
+<?php
+  // Define "newarray" and give each element a key:
+  // "course" for "SI664", "instructor" for "Chuck", "gsi" for "Young Eun"
+  // Print "Chuck"
+  echo '11.';
+  // enter your code
+?>
+
+<?php
+  // Loop through "newarray" and print "Key=*, Value=*" for all key-value pairs in the array
+  echo '.';
+  // enter your code
+?>
