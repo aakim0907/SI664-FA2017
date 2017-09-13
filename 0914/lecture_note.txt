@@ -1,0 +1,22 @@
+* Looping through an array 
+  - foreach 
+    - foreach($arr as $k => $v)
+    - foreach($arr as $v)
+  - for 
+    - for ($i=0; $i < count($arr); $i++)
+  
+* Array functions
+  - array_key_exists($key, $arr) : returns true/false
+  - isset($arr['key']) : returns true/false (there has to be a key-value pair)
+  - count($arr)
+  - is_array($arr)
+  - sort($arr) : sorts array values (loses keys)
+  - ksort($arr) : sorts array by key
+  - asort($arr) : sorts array by value (keeps keys)
+  - shuffle($arr)
+
+
+* Null-coalesce operator (PHP 7.0)
+  - $name = $arr['name'] ?? 'not found';
+    $addr = $arr['addr'] ?? 'not found';
+
