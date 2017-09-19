@@ -1,0 +1,91 @@
+<PHP Functions>
+  * PHP Functions / Modularity
+    - definding a function
+      function greet() {
+        print "Hello\n";
+      }
+      greet();
+
+    - 'return' : replaces the function call
+
+    - optional arguments
+      function howdy($lang='es') {
+        ~
+      }
+
+    - call by reference -> parameter/argument will be udpated!!!
+      function triple(&$realthing) {
+        $realthing = $realthing * 3;
+      }
+
+      $val = 10;
+      triple($val);
+      echo "Triple = $val"; 
+
+  * Scope and Modularity
+    - function_exists("array_combine")
+    - phpinfo() : prints out the internal confiuration capabilities of your PHP installation
+
+  * Programming in Multiple Files
+    - include : pull the file here (non-fatal error -> might want to write a conditional checking the presence of the file)
+    - require : pull the file here and die if it's missing
+    - require_once : if the file is already included, it does not require it again
+
+
+<PHP Forms>
+  * Form Processing in PHP 
+    - <input type='text' name='guess' id='guess'/>
+      - name: server / id: css
+        (variable for $_GET)
+  * GET & POST
+    - <form method='post'>
+      </form>
+        => gets rid of url variables
+        => data stored in $_POST ($_GET empty)
+
+    - GET: parameters in url
+      - when reading / searching things
+      - should be 'idempotent' : same URL should give 'same thing' each time you access it
+      - upper limit of parameters
+
+    - POST: parameters appended to the request in HTTP connection -> can send much more data 
+      - when data is being created / modified
+      - web spiders do not follow POST URLs
+
+
+<Form Input Types>
+  * Text 
+    <label for='inp01'>Name:</label>
+    <input type='text' name='name' id='inp01' size=40'/>
+  * Radio
+    <input type='radio' name='when' value='am'/>AM<br>
+    <input type='radio' name='when' value='pm' checked/>PM
+  * Checkbox
+    <input type='checkbox' name='class1' value='SI502' checked/>SI502<br>
+    <input type='checkbox' name='class2' value='SI539'/>SI539<br>
+    <input type='checkbox' name='class3' value='SI664'/>SI664<br>
+  * Select
+    <select name='soda' id='inp06'>
+      <option value='0'>--Please Select--</option>
+      <option value='1'>Coke</option>
+      <option value='2'>Pepsi</option>
+      <option value='3'>Mountain Dew</option>
+      <option value='4'>Sprite</option>
+    </select>
+  * Textarea
+    <textarea rows='10' cols='40' id='inp08' name='about'/>
+
+
+<Data Security / Integrity / Validation>
+  * htmlentities()
+  * Incoming Data Validation 
+    - strlen($var) > 0
+    - is_numeric($var)
+    - strpos($var, '@') > 0
+
+<Convention: Model View Controller (MVC)>
+  * Model : handle data
+    View : produce output
+    controller : orchestration / routing
+  * Chuck's Pattern
+    - Processing POST data (model) & Producing page output (view) => controller
