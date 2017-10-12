@@ -1,0 +1,39 @@
+<PHP Objects>
+* Object Oriented Programming (OOP)
+  * class: a template
+  * method: a defined capability of a class
+  * object / instance: a particular instance of a class
+
+* Building Objects
+  * this : only within class, method
+
+  * :: 
+    * access 'static item' in a class
+  * -> 
+    * access item in an object
+ 
+* Object Life Cycle
+  * constructor & destructor
+
+* Inheritance
+  * class Social "extends" Hello
+
+  * public: outside, inside, derived
+  * protected: inside, derived 
+  * private: inside
+
+  * $player = new stdClass();
+
+<PHP and MySQL>
+* Accessing MySQL using PDO
+  * PDO library to connect with MySql (Portable Data Objects)
+  * $pdo = new PDO(connection, id, password)
+                  ('mysql:host=localhost;port=8889;dbname=misc', 'fred', 'zap') -> take it out to pdo.php
+  * $stmt = $pdo->query("SELECT * FROM users");
+  * while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
+      print_r($row);
+    }
+    => run until $row is false
+
+  * use placeholders to escape SQL injection
+  * 
