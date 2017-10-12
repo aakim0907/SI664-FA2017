@@ -1,5 +1,4 @@
 <?php
-
 class Person {
     public $fullname = false;
     public $givenname = false;
