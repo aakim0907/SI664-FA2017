@@ -1,0 +1,22 @@
+<html>
+
+  <form>
+    Farenheit :
+    <input type="text" id="F" />
+    </br>
+    </br>
+    <input type="button" onClick="convert()" Value="Convert" />
+  </form>
+
+  <p>
+    Celcius : <span id="result"/> 
+  </p>
+
+  <script>
+    function convert() {
+      temp = document.getElementById("F").value;
+      document.getElementById("result").innerHTML = (temp - 32) * 5 / 9;
+    }
+  </script>
+
+</html>
