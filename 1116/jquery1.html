@@ -1,0 +1,22 @@
+<html>
+  <head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  </head>
+
+  <body>
+    <h1>Welcome to my converter!</h1>
+
+    <input type="text" id="id_01" style='display:none;' placeholder="inch"/>
+    <button id='btn_02' style='display:none;' onclick="convert();">Convert</button>
+    <input type="text" id="id_02" style='display:none;' placeholder="centimeter"/>
+
+    <button id='btn_01' onclick="$('#id_01').show(); $('#id_02').show(); $('#btn_01').hide(); $('#btn_02').show(); return false;">Show</button>
+  </body>
+
+  <script>
+    function convert() {
+      inch = document.getElementById("id_01").value;
+      document.getElementById("id_02").value = inch * 2.54;
+    }
+  </script>
+</html>

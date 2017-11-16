@@ -1,0 +1,46 @@
+<html>
+
+  <head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  </head>
+
+  <body>
+    <h1>Playing with the Div!</h1>
+
+    <button id='btn_01' onclick="bigger();">Make It Bigger</button>
+    <button id='btn_02' onclick="smaller();">Make It Smaller</button>
+    <br/>
+
+    width: <span id='span_01'>100</span>px
+    <br/>
+    height: <span id='span_02'>100</span>px
+
+    <div id="div_01" style='margin:20px;width:100px;height:100px;background-color:cadetblue'/>
+
+  </body>
+
+  <script>
+    function bigger() {
+      const divWidth = $("#div_01").width();
+      const divHeight = $("#div_01").height();
+      $("#div_01").animate({
+        width: '+=100px',
+        height: '+=100px'
+      });
+      $("#span_01").empty().append(divWidth+100);
+      $("#span_02").empty().append(divHeight+100);
+    }
+
+    function smaller() {
+      const divWidth = $("#div_01").width();
+      const divHeight = $("#div_01").height();
+      $("#div_01").animate({
+        width: '-=100px',
+        height: '-=100px'
+      });
+      $("#span_01").empty().append(divWidth-100);
+      $("#span_02").empty().append(divHeight-100);
+    }
+  </script>
+
+</html>
